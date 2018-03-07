@@ -1,6 +1,8 @@
 #include <stdio.h>
 
+// Structures are like objects or classes
 typedef struct {
+    // to be properties of person structure
     char * name;
     int age;
 } person;
@@ -8,7 +10,8 @@ typedef struct {
 int main() {
     person chris;
 
+    // assign properties
     chris.name = "Chris";
     chris.age = 37;
-    printf("%s is %d years old.", chris.name, chris.age);
+    printf("%s is %d years old.\n", chris.name, chris.age);
 }
