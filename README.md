@@ -2,7 +2,7 @@
 
 ---
 #### Compile Script:
-`$ gcc -o 'compiled name' 'script name'.c`
+`$ gcc 'script name'.c -o 'compiled name'`
 
 `$ ./'compiled name'`
 
