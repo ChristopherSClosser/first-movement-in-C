@@ -4,6 +4,6 @@
 #### Compile Script:
 `$ gcc 'script name'.c -o 'compiled name'`
 
-`$ ./'compiled name'`
+`$ 'compiled name'`
 
 `$ 'output from script'`
