@@ -13,6 +13,7 @@ char* remove_char(char* dst, const char* src)
 void flush();
 int main()
 {
+    /* magic numbers are necessary -max length- */
     char str[25];
     char hld[25];
     // char word;
@@ -32,7 +33,7 @@ int main()
       printf("%s\n", remove_char(buffer, hld));
       free(buffer);
 
-      // flush leaves the prompt running
+      /* flush leaves the prompt running */
       // flush();
 
     return 0;
@@ -41,8 +42,7 @@ int main()
 void flush()
 {
     int c;
-    while ((c = getchar()) != '\n' && c != EOF)
-        ;
+    while ((c = getchar()) != '\n' && c != EOF);
 }
 
 // int main () {
