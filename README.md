@@ -2,7 +2,7 @@
 
 ---
 #### Compile Script:
-`$ gcc 'script name'.c -o 'compiled name'`
+`$ gcc 'script name'.c -lm -lSDL2main -lSDL2 -o 'compiled name'`
 
 `$ 'compiled name'`
 
