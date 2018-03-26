@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+/* -------- Works only with single characters -------- */
 char* replacechar(char *str, char *orig, char *rep) {
     char *chr = str;
     int i = 0;
