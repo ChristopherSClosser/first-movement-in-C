@@ -7,20 +7,21 @@
 //
 // }
 
-char* replacechar(char *str, char orig, char rep) {
+char* replacechar(char *str, char *orig, char *rep) {
     char *ix = str;
     int n = 0;
-    while((ix = strchr(ix, orig)) != NULL) {
-        *ix++ = rep;
+    while((ix = strchr(ix, *orig)) != NULL) {
+        *ix++ = *rep;
         n++;
     }
     return (char*)str;
 }
 
 int main() {
-  /* code */
   char str[25];
   char hld[25];
+  char orig[25];
+  char rep[25];
   // char word;
 
   printf("Enter a word or sentence\n");
@@ -31,16 +32,22 @@ int main() {
   fgets(str, 25, stdin);
   // printf("hold %s\n", hld);
   if (str[0]=='Y')
-    printf("you pressed yes or: %s\n", str);
-    char orig = 's';
-    char rep = '5';
+  {
+    printf("Enter character to replace:\n");
+    fgets(orig, 25, stdin);
+    printf("you entered: %s\nEnter replacement character:\n", orig);
+    fgets(rep, 25, stdin);
+    printf("you entered: %s\n", rep);
+    // printf("Enter replacement character:\n");
+    // fgets(rep, 25, stdin);
     // char* buffer;
     // const size_t buffer_size = strlen(hld) + 1;
     // buffer = (char*) malloc(buffer_size);
-    printf("%s\n", replacechar(hld, (char) orig, (char) rep));
+    printf("%s\n", replacechar(hld, orig, rep));
     // free(buffer);
 
     /* flush leaves the prompt running */
     // flush();
+  }
   return 0;
 }
