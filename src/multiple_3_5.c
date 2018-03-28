@@ -15,6 +15,7 @@ int mult_3x5(int number) {
 }
 
 int main(int argc, char *argv[]) {
+  // argv[1] is number entered in command line
   long num = strtol(argv[1], 0, 10);
   printf("%i\n", mult_3x5(num));
 
