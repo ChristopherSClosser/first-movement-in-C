@@ -12,8 +12,45 @@ char* replacechar(char *str, char *orig, char *rep) {
     }
     return (char*)str;
 }
+char *correct(char *string)
+{
+  // char src[] = "L0ND0N";
+  char *o_char = "0";
+  char o = 'O';
+  char *s_char = "5";
+  char s = 'S';
+  char *i_char = "1";
+  char i = 'I';
+
+  char *c = string;
+  // c[strlen(c) + 1] = '\0';
+  while (*c)
+  {
+    if (strchr(s_char, *c))
+    {
+      printf("%s\n", string);
+      *c++ = s;
+    }
+
+    if (strchr(o_char, *c))
+    {
+      *c++ = o;
+    }
+    if (strchr(i_char, *c))
+    {
+      *c++ = i;
+    }
+    c++;
+  }
+  return string;
+}
 
 int main() {
+  char src[] = "PAR15";
+  // printf("%s\n", src);
+
+  printf("%s\n", correct(src));
+  /*
   char str[25];
   char hld[25];
   char orig[25];
@@ -35,8 +72,9 @@ int main() {
     printf("you entered: %s\n", rep);
     printf("%s\n", replacechar(hld, orig, rep));
 
-    /* flush leaves the prompt running */
+     // flush leaves the prompt running
     // flush();
   }
+  */
   return 0;
 }
