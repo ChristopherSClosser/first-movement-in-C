@@ -17,8 +17,8 @@ def high(x):
     return wlist[scores.index(max(scores))]
 """
 
- @param str: a C-string containing only lowercase letters and spaces (' ')
-    @return: a C-string allocated on the heap containing the highest scoring word of str
+  @param str: a C-string containing only lowercase letters and spaces (' ')
+  @return: a C-string allocated on the heap containing the highest scoring word of str
 */
 char *highestScoringWord(char *str)
 {
