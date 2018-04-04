@@ -14,7 +14,13 @@ char* replacechar(char *str, char *orig, char *rep) {
 }
 char *correct(char *string)
 {
-  // char src[] = "L0ND0N";
+  // ----------- nice way of doing it ----------
+  // for (char *a = &string[0]; *a != '\0'; a += 1)
+  // {
+  //   *a = (*a == '0')? 'O': (*a == '5')? 'S': (*a == '1')? 'I' : *a;
+  // }
+  // return string;
+
   char *o_char = "0";
   char o = 'O';
   char *s_char = "5";
@@ -23,24 +29,21 @@ char *correct(char *string)
   char i = 'I';
 
   char *c = string;
-  // c[strlen(c) + 1] = '\0';
   while (*c)
   {
     if (strchr(s_char, *c))
     {
-      printf("%s\n", string);
-      *c++ = s;
+      *c = s;
     }
-
     if (strchr(o_char, *c))
     {
-      *c++ = o;
+      *c = o;
     }
     if (strchr(i_char, *c))
     {
-      *c++ = i;
+      *c = i;
     }
-    c++;
+    *c++;
   }
   return string;
 }
@@ -50,7 +53,7 @@ int main() {
   // printf("%s\n", src);
 
   printf("%s\n", correct(src));
-  /*
+  /* ----------- prompts for word and replacement character -------------
   char str[25];
   char hld[25];
   char orig[25];
